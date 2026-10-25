@@ -1,0 +1,10 @@
+name = "pantheon-cookie-scanner"
+main = "src/index.js"
+compatibility_date = "2026-10-24"
+compatibility_flags = ["nodejs_compat"]
+
+[browser]
+binding = "BROWSER"
+
+[vars]
+ALLOWED_HOSTS = ""

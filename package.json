@@ -1,0 +1,23 @@
+{
+  "name": "pantheon-cloudflare-scanner",
+  "private": true,
+  "description": "Escáner de cookies de Pantheon mediante Cloudflare Browser Run",
+  "type": "module",
+  "cloudflare": {
+    "bindings": {
+      "ALLOWED_HOSTS": {
+        "description": "Dominios autorizados separados por comas, sin protocolo (ejemplo.com,otrodominio.com)."
+      },
+      "SCANNER_TOKEN": {
+        "description": "Clave privada larga y aleatoria. Introduce exactamente el mismo valor en Pantheon > Cookies > Análisis automático."
+      }
+    }
+  },
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/playwright": "^1.3.6",
+    "wrangler": "^4.0.0"
+  }
+}
